@@ -73,4 +73,9 @@
 ;; === misc ===
 ;; (load-file "~/.emacs.d/config/init-70-misc-ledger.el")
 
+;; Move the customize interface commands to a new file.
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)
+
 ;;; init.el ends here
+
