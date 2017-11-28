@@ -3,3 +3,5 @@ auto-save-list/**/*
 *.desktop*
 *elpa/
 *server/
+projectile.cache
+projectile-bookmarks.eld

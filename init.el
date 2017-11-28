@@ -16,8 +16,8 @@
 ;; The below lines set up emacs to use the Renishaw Proxy when fetching packages.
 (setq url-proxy-services
    '(("no_proxy" . "^\\(localhost\\|10.*\\)")
-     ("http" . "127.0.0.1:3128")
-     ("https" . "127.0.0.1:3128")))
+     ("http"  . "wg.uk.wrproxy.com:3128")
+     ("https" . "wg.uk.wrproxy.com:3128")))
 (setq url-http-proxy-basic-auth-storage
     (list (list "wg.uk.wrproxy.com:3128"
                 (cons "Input your LDAP UID !"

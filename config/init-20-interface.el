@@ -7,8 +7,11 @@
 
 ;;; Code:
 
+(use-package ag)
 (use-package helm-ag
   :bind (("M-x" . helm-M-x)))
+(use-package ibuffer
+  :bind (("C-x C-b" . ibuffer)))
 (use-package ranger)
 (use-package minimap)
 (use-package undo-tree)

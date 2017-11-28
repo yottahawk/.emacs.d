@@ -12,6 +12,20 @@
 ;;   Flycheck :: code syntax/convention checking
 ;; helm-gtags vhdl-tools  ggtags helm-projectile flx-ido projectile
 
+(use-package projectile)
+(use-package helm-projectile)
+(use-package ibuffer-projectile)
+
+
+(use-package sr-speedbar
+  :init
+  (setq speedbar-use-images nil
+        sr-speedbar-right-side nil)  
+  :bind
+  ("M-s" . sr-speedbar-toggle))
+(use-package projectile-speedbar)
+
+
 (use-package multiple-cursors
   :bind
   ("C-c m c" . mc/edit-lines))
@@ -20,12 +34,8 @@
   (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
   :bind
   ("M-p" . ace-window))
-(use-package sr-speedbar
-  :init
-  (setq speedbar-use-images nil
-        sr-speedbar-right-side nil)  
-  :bind
-  ("M-s" . sr-speedbar-toggle))
+
+
 (use-package magit
   :defer t)
 (use-package smart-tabs-mode
