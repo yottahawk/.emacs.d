@@ -12,18 +12,27 @@
 ;;   Flycheck :: code syntax/convention checking
 ;; helm-gtags vhdl-tools  ggtags helm-projectile flx-ido projectile
 
-(use-package projectile)
+(use-package projectile
+  :init
+  (projectile-mode)
+  :bind
+  ("C-x M-t" . projectile-term))
 (use-package helm-projectile)
-(use-package ibuffer-projectile)
-
+(use-package ibuffer-projectile
+  :init
+  ;; Make ibuffer windows sort buffers by projectile projects
+  (add-hook 'ibuffer-hook
+    (lambda ()
+      (ibuffer-projectile-set-filter-groups)
+      (unless (eq ibuffer-sorting-mode 'alphabetic)
+        (ibuffer-do-sort-by-alphabetic)))))
 
 (use-package sr-speedbar
   :init
-  (setq speedbar-use-images nil
-        sr-speedbar-right-side nil)  
+  (setq speedbar-use-images nil)
+;;        sr-speedbar-right-side nil)  
   :bind
   ("M-s" . sr-speedbar-toggle))
-(use-package projectile-speedbar)
 
 
 (use-package multiple-cursors
@@ -57,5 +66,18 @@
 ;;   :config (setq magit-save-repository-buffers 'dontask))
 
 
+(defun projectile-term ()
+  "Create an ansi-term at the project root"
+  (interactive)
+  (let ((root (projectile-project-root))
+	(buff-name (concat " [term] " (projectile-project-root))))
+    (if (get-buffer buff-name)
+      (switch-to-buffer-other-window buff-name)
+      (progn
+	(split-window-sensibly (selected-window))
+	(other-window 1)
+	(setq default-directory root)
+	(shell (getenv "SHELL"))
+	(rename-buffer buff-name t)))))
 
 

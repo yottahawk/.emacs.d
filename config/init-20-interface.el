@@ -13,7 +13,6 @@
 (use-package ibuffer
   :bind (("C-x C-b" . ibuffer)))
 (use-package ranger)
-(use-package minimap)
 (use-package undo-tree)
 (use-package browse-kill-ring+)
 
@@ -21,4 +20,4 @@
 (server-start)
 
 ;; User ranger mode instead of dired by default
-;; (ranger-override-dired-mode t)
+(ranger-override-dired-mode t)

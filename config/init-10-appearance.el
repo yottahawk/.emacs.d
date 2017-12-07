@@ -7,7 +7,7 @@
 
 ;;; Code:
 
-(use-package indent-guide)
+;; (use-package indent-guide)
 (use-package highlight-indent-guides)
 (use-package linum-relative)
 (use-package smart-mode-line
@@ -26,7 +26,7 @@
 ;; Set the default font to "InputMonoNarrow" for all configurations
 (custom-set-faces '(default ((t (:family "InputMonoNarrow" :foundry "outline" :slant normal :weight normal :height 98 :width normal)))))
 ;; Default cursor type to bar
-(setq-default cursor-type 'bar) 
+(setq-default cursor-type 'bar)
 ;; Highlighted text is deleted when typing
 (delete-selection-mode 1)
 

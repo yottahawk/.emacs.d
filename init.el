@@ -77,5 +77,14 @@
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
+;; emacs auto-save files are placed in the TEMP directory
+;; https://www.emacswiki.org/emacs/AutoSave
+(setq backup-directory-alist
+      `(("." . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `(("." ,temporary-file-directory t)))
+;; Stop the creation of #. lockfiles in the working directory
+(setq create-lockfiles nil)
+
 ;;; init.el ends here
 
