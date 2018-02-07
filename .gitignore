@@ -3,5 +3,6 @@ auto-save-list/**/*
 *.desktop*
 *elpa/
 *server/
+*eshell/
 projectile.cache
 projectile-bookmarks.eld
