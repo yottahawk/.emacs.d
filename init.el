@@ -45,8 +45,8 @@
 ;; Enable use-package
 (eval-when-compile
   (require 'use-package))
-(require 'diminish)                ;; if you use :diminish
-(require 'bind-key)                ;; if you use any :bind variant
+;(require 'diminish)                ;; if you use :diminish
+;(require 'bind-key)                ;; if you use any :bind variant
 
 (setq use-package-always-ensure t)
 

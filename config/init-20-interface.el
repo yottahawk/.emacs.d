@@ -14,7 +14,7 @@
   :bind (("C-x C-b" . ibuffer)))
 (use-package ranger)
 (use-package undo-tree)
-(use-package browse-kill-ring+)
+;;(use-package browse-kill-ring+)
 
 (global-set-key (kbd "C-j") 'previous-buffer)
 (global-set-key (kbd "C-k") 'next-buffer)
@@ -34,4 +34,5 @@
       (window-configuration-to-register '_)
       (delete-other-windows))))
 
-(global-set-key (kbd "<C-f1>") 'toggle-maximize-buffer) 
+(global-set-key (kbd "<C-f1>") 'toggle-maximize-buffer)
+(global-set-key (kbd "C-z") 'undo)

@@ -4,6 +4,7 @@
 (setq mc/cmds-to-run-for-all
       '(
 	vhdl-electric-comma
+	vhdl-electric-semicolon
 	vhdl-electric-space
 	))
 
