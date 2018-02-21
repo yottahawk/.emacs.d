@@ -15,9 +15,13 @@
 (use-package projectile
   :init
   (projectile-mode)
+  (setq projectile-enable-caching t)
   :bind
   ("C-x M-t" . projectile-term))
-(use-package helm-projectile)
+(use-package helm-projectile
+  :init
+  (setq projectile-completion-system 'helm)
+  (helm-projectile-on))
 (use-package ibuffer-projectile
   :init
   ;; Make ibuffer windows sort buffers by projectile projects
