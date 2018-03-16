@@ -7,3 +7,4 @@ auto-save-list/**/*
 projectile.cache
 projectile-bookmarks.eld
 TAGS
+.python-environments
