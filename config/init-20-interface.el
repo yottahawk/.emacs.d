@@ -15,6 +15,7 @@
 (use-package ranger)
 (use-package undo-tree)
 ;;(use-package browse-kill-ring+)
+
 (global-set-key (kbd "C-j") 'previous-buffer)
 (global-set-key (kbd "C-k") 'next-buffer)
 
