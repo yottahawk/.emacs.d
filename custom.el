@@ -5,6 +5,22 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(compilation-scroll-output t)
+ '(ibuffer-formats
+   (quote
+    ((mark modified read-only " "
+	   (name 30 30 :left :elide)
+	   " "
+	   (size 9 -1 :right)
+	   " "
+	   (mode 16 16 :left :elide)
+	   " " filename-and-process)
+     (mark " "
+	   (name 16 -1)
+	   " " filename))))
+ '(package-selected-packages
+   (quote
+    (centered-cursor-mode use-package undo-tree smart-tabs-mode smart-mode-line ranger projectile-speedbar multiple-cursors minimap magit linum-relative indent-guide ibuffer-projectile highlight-indent-guides helm-projectile helm-ag browse-kill-ring+ ag ace-window)))
  '(vhdl-company-name "Renishaw Plc.")
  '(vhdl-compiler "Aldec")
  '(vhdl-compiler-alist

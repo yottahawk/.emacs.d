@@ -3,9 +3,12 @@
 
 (setq mc/cmds-to-run-for-all
       '(
-        vhdl-electric-space
-        ))
+	vhdl-electric-comma
+	vhdl-electric-semicolon
+	vhdl-electric-space
+	))
 
 (setq mc/cmds-to-run-once
       '(
-        ))
+	vhdl-electric-dash
+	))

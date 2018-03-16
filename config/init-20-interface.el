@@ -14,13 +14,15 @@
   :bind (("C-x C-b" . ibuffer)))
 (use-package ranger)
 (use-package undo-tree)
-(use-package browse-kill-ring+)
-
+;;(use-package browse-kill-ring+)
 (global-set-key (kbd "C-j") 'previous-buffer)
 (global-set-key (kbd "C-k") 'next-buffer)
 
 ;; Start emacs server mode, to allow ActiveHDL to open files inside an active window
 (server-start)
+
+;; Ensure all compilation links inside a shell window are clickable.
+(add-hook 'shell-mode-hook 'compilation-shell-minor-mode)
 
 ;; User ranger mode instead of dired by default
 (ranger-override-dired-mode t)
@@ -34,4 +36,5 @@
       (window-configuration-to-register '_)
       (delete-other-windows))))
 
-(global-set-key (kbd "<C-f1>") 'toggle-maximize-buffer) 
+(global-set-key (kbd "<C-f1>") 'toggle-maximize-buffer)
+(global-set-key (kbd "C-z") 'undo)
