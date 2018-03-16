@@ -22,6 +22,9 @@
 ;; Start emacs server mode, to allow ActiveHDL to open files inside an active window
 (server-start)
 
+;; Ensure all compilation links inside a shell window are clickable.
+(add-hook 'shell-mode-hook 'compilation-shell-minor-mode)
+
 ;; User ranger mode instead of dired by default
 (ranger-override-dired-mode t)
 
