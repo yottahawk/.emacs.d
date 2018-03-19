@@ -69,6 +69,7 @@
 ;; === Programming & Coding Functions ===
 (load-file "~/.emacs.d/config/init-40-coding-gen.el")
 (load-file "~/.emacs.d/config/init-41-coding-vhdl.el")
+(load-file "~/.emacs.d/config/init-42-coding-python.el")
 
 ;; === misc ===
 ;; (load-file "~/.emacs.d/config/init-70-misc-ledger.el")

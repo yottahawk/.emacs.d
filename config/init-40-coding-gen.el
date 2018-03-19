@@ -83,6 +83,3 @@
 	(setq default-directory root)
 	(shell (getenv "SHELL"))
 	(rename-buffer buff-name t)))))
-
-
-(add-hook 'python-mode-hook 'jedi:setup)
