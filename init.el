@@ -8,7 +8,7 @@
 (setq user-mail-address "harry.callahan@renishaw.com")
 
 (setq debug-on-error t)
-(message "* --[ Loading my Emacs init file ]--")
+(message "* --[ Loading Harry's Emacs init file ]--")
 
 ;; measure startup times
 ;; (setq emacs-load-start-time (current-time))
@@ -46,7 +46,7 @@
 (eval-when-compile
   (require 'use-package))
 ;(require 'diminish)                ;; if you use :diminish
-;(require 'bind-key)                ;; if you use any :bind variant
+(require 'bind-key)                ;; if you use any :bind variant
 
 (setq use-package-always-ensure t)
 

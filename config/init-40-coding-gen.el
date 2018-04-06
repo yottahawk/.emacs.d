@@ -16,6 +16,7 @@
   :init
   (projectile-mode)
   (setq projectile-enable-caching t)
+  (setq projectile-switch-project-action 'projectile-dired)  
   :bind
   ("C-x M-t" . projectile-term))
 (use-package helm-projectile
@@ -45,12 +46,14 @@
 (use-package ace-window
   :init
   (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
-  :bind
-  ("M-p" . ace-window))
+  (bind-keys*
+    ("M-i" . ace-window)))
 
 
 (use-package magit
-  :defer t)
+  :init
+  (bind-keys*
+    ("C-x g" . magit-status)))  
 (use-package smart-tabs-mode
   :init
   ;; All programming modes to use indent highlighting
