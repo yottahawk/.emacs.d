@@ -13,17 +13,6 @@
 ;; measure startup times
 ;; (setq emacs-load-start-time (current-time))
 
-;; The below lines set up emacs to use the Renishaw Proxy when fetching packages.
-;; (setq url-proxy-services
-;;    '(("no_proxy" . "^\\(localhost\\|10.*\\)")
-;;      ("http"  . "wg.uk.wrproxy.com:3128")
-;;      ("https" . "wg.uk.wrproxy.com:3128")))
-;; (setq url-http-proxy-basic-auth-storage
-;;     (list (list "wg.uk.wrproxy.com:3128"
-;;                 (cons "Input your LDAP UID !"
-;;                       (base64-encode-string "LOGIN:PASSWORD")))))
-
-
 
 ;; Setup package archives
 (require 'package)
