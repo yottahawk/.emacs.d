@@ -7,23 +7,29 @@
 
 ;;; Code:
 
+(use-package multishell)
+(add-hook 'shell-mode-hook 'my-shell-mode-hook 'compilation-shell-minor-mode)
+;; Ensure all compilation links inside a shell window are clickable.
+(defun my-shell-mode-hook ()
+  (process-send-string (get-buffer-process (current-buffer))
+                       "export TERM=xterm-256color\n"))
+
 (use-package ag)
 (use-package helm-ag
   :bind (("M-x" . helm-M-x)))
 (use-package ibuffer
   :bind (("C-x C-b" . ibuffer)))
 (use-package ranger)
+;; User ranger mode instead of dired by default
+(ranger-override-dired-mode t)
+
 (use-package undo-tree)
 ;;(use-package browse-kill-ring+)
 
 ;; Start emacs server mode, to allow ActiveHDL to open files inside an active window
 (server-start)
 
-;; Ensure all compilation links inside a shell window are clickable.
-(add-hook 'shell-mode-hook 'compilation-shell-minor-mode)
-
-;; User ranger mode instead of dired by default
-(ranger-override-dired-mode t)
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; Set bind-key global keybinds that cannot be overwritten by major-modes.
 (bind-keys*

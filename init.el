@@ -22,7 +22,7 @@
 			 ;; ("marmalade" . "http://marmalade-repo.org/packages/")
 			 ("gnu" . "http://elpa.gnu.org/packages/")
 			 ;; ("org" . "http://orgmode.org/elpa/")
-			 ("elpy" . "http://jorgenschaefer.github.io/packages/"))))
+			 ;; ("elpy" . "http://jorgenschaefer.github.io/packages/"))))
 (package-initialize)
 
 ;; https://github.com/jwiegley/use-package
@@ -53,7 +53,7 @@
 
 ;; === Document Editing ===
 ;; (load-file "~/.emacs.d/config/init-30-doc-gen.el")
-;; (load-file "~/.emacs.d/config/init-31-doc-org.el")
+(load-file "~/.emacs.d/config/init-31-doc-org.el")
 
 ;; === Programming & Coding Functions ===
 (load-file "~/.emacs.d/config/init-40-coding-gen.el")
@@ -79,3 +79,4 @@
 
 ;;; init.el ends here
 
+(put 'erase-buffer 'disabled nil)
