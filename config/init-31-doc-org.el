@@ -2,6 +2,9 @@
 
 ;; (use-package org-wiki)
 
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+
 ;; Install org-wiki from Github if it is not already installed.
 (if (require 'org-wiki)
     (print "Already installed!")   

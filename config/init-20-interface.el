@@ -22,7 +22,7 @@
 (use-package ranger)
 ;; User ranger mode instead of dired by default
 (ranger-override-dired-mode t)
-
+(use-package which-key)
 (use-package undo-tree)
 ;;(use-package browse-kill-ring+)
 
@@ -30,6 +30,7 @@
 (server-start)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; Set bind-key global keybinds that cannot be overwritten by major-modes.
 (bind-keys*
