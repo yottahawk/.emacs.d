@@ -13,13 +13,12 @@
 ;; measure startup times
 ;; (setq emacs-load-start-time (current-time))
 
-
 ;; Setup package archives
 (require 'package)
 (setq package-enable-at-startup nil)
 (setq package-archives (append package-archives
 			 '(("melpa" . "http://melpa.org/packages/")
-			 ;; ("marmalade" . "http://marmalade-repo.org/packages/")
+			 ("marmalade" . "http://marmalade-repo.org/packages/")
 			 ("gnu" . "http://elpa.gnu.org/packages/")
 			 ;; ("org" . "http://orgmode.org/elpa/")
 			 ("elpy" . "http://jorgenschaefer.github.io/packages/"))))
