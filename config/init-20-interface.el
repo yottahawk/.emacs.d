@@ -19,9 +19,19 @@
   :bind (("M-x" . helm-M-x)))
 (use-package ibuffer
   :bind (("C-x C-b" . ibuffer)))
-(use-package ranger)
-;; User ranger mode instead of dired by default
-(ranger-override-dired-mode t)
+(use-package ranger
+  :init
+  ;; Slightly strange behaviour that the literal previews seem to always toggle-off when ranger is closed, so
+  ;; adding a hook to always toggle-on means that we always see literal previews when starting ranger.
+  (add-hook 'ranger-mode-load-hook 'ranger-toggle-literal)
+  :config
+  (ranger-override-dired-mode t) ;; User ranger mode instead of dired by default
+  (setq ranger-cleanup-on-disable t
+	ranger-cleanup-eagerly t)
+  (define-key ranger-normal-mode-map (kbd "C-h") nil)
+  :bind
+  ;; ("C-h" . nil)
+  )
 (use-package which-key
   :init
   (which-key-mode))
