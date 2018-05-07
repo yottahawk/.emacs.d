@@ -32,12 +32,12 @@
       (unless (eq ibuffer-sorting-mode 'alphabetic)
         (ibuffer-do-sort-by-alphabetic)))))
 
-(use-package sr-speedbar
-  :init
-  (setq speedbar-use-images nil)
-;;        sr-speedbar-right-side nil)  
-  :bind
-  ("M-s" . sr-speedbar-toggle))
+;; (use-package sr-speedbar
+;;   :init
+;;   (setq speedbar-use-images nil)
+;; ;;        sr-speedbar-right-side nil)
+;;   :bind
+;;   ("M-s" . sr-speedbar-toggle))
 
 
 (use-package multiple-cursors

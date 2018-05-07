@@ -22,7 +22,7 @@
  '(multishell-pop-to-frame t)
  '(package-selected-packages
    (quote
-    (centered-cursor-mode use-package undo-tree smart-tabs-mode smart-mode-line ranger projectile-speedbar multiple-cursors minimap magit linum-relative indent-guide ibuffer-projectile highlight-indent-guides helm-projectile helm-ag browse-kill-ring+ ag ace-window)))
+    (treemacs-projectile treemacs-evil treemacs centered-cursor-mode use-package undo-tree smart-tabs-mode smart-mode-line ranger projectile-speedbar multiple-cursors minimap magit linum-relative indent-guide ibuffer-projectile highlight-indent-guides helm-projectile helm-ag browse-kill-ring+ ag ace-window)))
  '(vhdl-company-name "Renishaw Plc.")
  '(vhdl-compiler "Aldec")
  '(vhdl-compiler-alist
