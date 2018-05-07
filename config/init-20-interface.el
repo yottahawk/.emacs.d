@@ -8,11 +8,11 @@
 ;;; Code:
 
 (use-package multishell)
-(add-hook 'shell-mode-hook 'my-shell-mode-hook 'compilation-shell-minor-mode)
-;; Ensure all compilation links inside a shell window are clickable.
-(defun my-shell-mode-hook ()
-  (process-send-string (get-buffer-process (current-buffer))
-                       "export TERM=xterm-256color\n"))
+;; (add-hook 'shell-mode-hook 'my-shell-mode-hook 'compilation-shell-minor-mode)
+;; ;; Ensure all compilation links inside a shell window are clickable.
+;; (defun my-shell-mode-hook ()
+;;   (process-send-string (get-buffer-process (current-buffer))
+;;                        "export TERM=xterm-256color\n"))
 
 (use-package ag)
 (use-package helm-ag
