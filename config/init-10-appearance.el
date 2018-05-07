@@ -30,8 +30,6 @@
 ;; Highlighted text is deleted when typing
 (delete-selection-mode 1)
 
-(tool-bar-mode 0)
-
 
 (desktop-save-mode 1) ;; Enable automated desktop saving
 ;; Setup emacs to place any backups and autosaves into the windows temp directory
