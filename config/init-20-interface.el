@@ -33,8 +33,9 @@
   ;; ("C-h" . nil)
   )
 (use-package which-key
-  :init
-  (which-key-mode))
+  :config
+  (which-key-mode)
+  )
 (use-package undo-tree)
 ;;(use-package browse-kill-ring+)
 
